@@ -1,23 +1,22 @@
-// Variable to track whether the mouse is currently moving over the video container
+
 let mouseMovingOverContainer = false;
 
-// Function to handle mousemove event over the video container
+
 function handleMouseMoveOverContainer() {
-  // Set mouseMovingOverContainer to true when mouse moves over the container
+
   mouseMovingOverContainer = true;
-  // Set animation speed to be fast when mouse moves over the container
+  
+  // Speed up aniamtion
   document.getElementById("nextEpisodeBtn").style.animationDuration = "0.1s";
 }
 
-// Function to handle mouseleave event over the video container
+
 function handleMouseLeaveContainer() {
-  // Set mouseMovingOverContainer to false when mouse leaves the container
   mouseMovingOverContainer = false;
   // Restore animation speed to normal when mouse leaves the container
   document.getElementById("nextEpisodeBtn").style.animationDuration = "4s";
 }
 
-// Function to handle animation end event
 function handleAnimationEnd() {
   // Check if mouse is not moving over the container
   if (!mouseMovingOverContainer) {
@@ -26,7 +25,7 @@ function handleAnimationEnd() {
   }
 }
 
-// Function to switch video and play automatically
+
 function switchVideo() {
   // Pause the currently playing video
   document.querySelectorAll(".video").forEach((video) => {
@@ -40,9 +39,7 @@ function switchVideo() {
   let nextVideoIndex = (currentVideoIndex + 1) % videos.length;
   videos[currentVideoIndex].style.display = "none";
   videos[nextVideoIndex].style.display = "block";
-  videos[nextVideoIndex].play(); // Start autoplaying the next video
-
-  // Update current video index
+  videos[nextVideoIndex].play(); 
   currentVideoIndex = nextVideoIndex;
 }
 
