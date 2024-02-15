@@ -7,12 +7,6 @@ function handleMouseMoveOverContainer() {
   document.getElementById("nextEpisodeBtn").style.animationDuration = "0.1s";
 }
 
-// Function to handle mouseleave event over the container
-function handleMouseLeaveContainer() {
-  mouseMovingOverContainer = false;
-  document.getElementById("nextEpisodeBtn").style.animationDuration = "4s";
-}
-
 // Function to handle button click event
 document.getElementById("nextEpisodeBtn").addEventListener("click", function () {
   // Change color of the container
@@ -40,7 +34,6 @@ function getRandomColor() {
 
 // event listeners for mouse movements
 document.getElementById("videoContainer").addEventListener("mousemove", handleMouseMoveOverContainer);
-document.getElementById("videoContainer").addEventListener("mouseleave", handleMouseLeaveContainer);
 
 // animation end
 document.getElementById("nextEpisodeBtn").addEventListener("animationend", handleAnimationEnd);
