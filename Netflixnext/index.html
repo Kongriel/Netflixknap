@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Netflix Sliding Button</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="video-container" id="videoContainer">
+            <video id="video1" class="video" controls autoplay>
+                <source src="video/film1.MOV">
+            </video>
+            <video id="video2" class="video" controls style="display: none;" autoplay>
+                <source src="video/film2.MOV">
+            </video>
+            <video id="video3" class="video" controls style="display: none;" autoplay>
+                <source src="video/film3.MOV">
+            </video>
+            <a id="nextEpisodeBtn"><i class="fa fa-play"></i>Next episode</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
